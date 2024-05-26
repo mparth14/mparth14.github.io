@@ -108,7 +108,7 @@ export default function RootLayout({
               &copy; {new Date().getFullYear()} {'/'} Parth Modi
             </p>
             <p>
-              <Link href="https://github.com/mparth14/note9">View Source</Link>
+              <Link href="https://github.com/mparth14/mparth14.github.io">View Source</Link>
             </p>
           </footer>
         </div>
