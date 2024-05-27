@@ -4,6 +4,7 @@ const nextConfig = {
   output: 'export',
   images: {
     domains: ['opengraph.githubassets.com'],
+    unoptimized: true
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   redirects: async () => {

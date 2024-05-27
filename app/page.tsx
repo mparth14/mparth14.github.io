@@ -97,6 +97,7 @@ export default async function Home() {
             return (
               <WrappingComponent
                 href={project.href ?? '/'}
+                target='_blank'
                 key={project.title}
                 className={clsx(
                   'flex flex-col justify-center bg-slate-100 hover:bg-slate-200/70 transition-colors rounded-xl p-8'

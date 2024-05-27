@@ -91,7 +91,7 @@ export default function RootLayout({
                 target="_blank"
                 className="text-950 text-sm tracking-tighter font-mono font-semibold"
               >
-                Download resume
+                Download Resume
               </Link>
 
               <Link
@@ -108,7 +108,7 @@ export default function RootLayout({
               &copy; {new Date().getFullYear()} {'/'} Parth Modi
             </p>
             <p>
-              <Link href="https://github.com/mparth14/mparth14.github.io">View Source</Link>
+              <Link target='_blank' href="https://github.com/mparth14/mparth14.github.io">View Source</Link>
             </p>
           </footer>
         </div>
