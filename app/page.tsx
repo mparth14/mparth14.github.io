@@ -10,6 +10,7 @@ const projects: {
   title: string;
   description: string;
   image: string;
+  alt: string;
 }[] = [
   {
     title: 'QuickHire',
@@ -17,6 +18,7 @@ const projects: {
     description:
       'An intuitive hiring platform designed to connect job seekers with those in need of services.',
     image: 'https://opengraph.githubassets.com/1/mparth14/quickhire',
+    alt: "QuickHire GitHub Repo"
   },
   {
     title: 'Note9',
@@ -24,18 +26,22 @@ const projects: {
     description:
       'A personal project to simplify note taking built with a serverless architecture using AWS services only.',
     image: 'https://opengraph.githubassets.com/1/mparth14/note9',
+    alt: "Note9 GitHub Repo"
+
   },
   {
     href: 'https://github.com/mparth14/TradeCards',
     title: 'TradeCards',
     description: 'A portal where users can sign up and exchange coupons, made using React and Spring Boot.',
     image: 'https://opengraph.githubassets.com/1/mparth14/tradecards',
+    alt: "TradeCards GitHub Repo"
   },
   {
     href: 'https://github.com/mparth14/ParkSpaceFinder',
     title: 'ParkSpaceFinder',
     description: 'An Android application that allows users to find and book available parking spaces near their location.',
-    image: 'https://opengraph.githubassets.com/1/mparth14/parkspacefinder',
+    image: 'https://opengraph.githubassets.com/1/mparth14/ParkSpaceFinder',
+    alt: "ParkSpaceFinder GitHub Repo"
   },
 ];
 
@@ -109,7 +115,7 @@ export default async function Home() {
                     height={240}
                     quality={90}
                     src={project.image}
-                    alt=""
+                    alt={project.alt}
                     className="rounded-xl bg-cover"
                   />
                 </div>
