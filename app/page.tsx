@@ -55,11 +55,8 @@ export default async function Home() {
             A software engineer from India currently in Canada.
           </span>
         </h1>
-        <p className="text-slate-700 text-lg md:text-xl leading-normal">
-
+        <p className="text-slate-700 text-md md:text-lg leading-normal">
         I am a dedicated self-taught developer and a Computer Science master&apos;s student at Dalhousie University. With a talent for crafting captivating user experiences and optimizing system performance, I thrive on developing products and tackling intricate technical challenges. I am passionate about experimenting with emerging technologies, always eager to push the boundaries of what`&apos;s possible.
-
-
         </p>
         <Link
           href="/info"
@@ -76,16 +73,13 @@ export default async function Home() {
         <Title as="h2" variant="secondary" className="mb-8">
           Recent Experience
         </Title>
-        <div className="flex space-x-4">
-          <img src="/thomson-reuters.png" alt="Thomson Reuters Logo" width="90" height="90" className="hover:opacity-70 hover:shadow-lg transition duration-300" />
-          <img src="/zealous-system.png" alt="Zealous System Logo" width="90" height="90" className="hover:opacity-70 hover:shadow-lg transition duration-300" />
-          <img src="/streebo.png" alt="Streebo Logo" width="90" height="90" className="hover:opacity-70 hover:shadow-lg transition duration-300" />
+        <div className="flex space-x-2">
+          <img src="/thomson-reuters.png" alt="Thomson Reuters Logo" width="100" height="90" className="hover:opacity-70 hover:shadow-sm transition duration-300" />
+          <img src="/zealous-system.png" alt="Zealous System Logo" width="100" height="90" className="hover:opacity-70 hover:shadow-sm transition duration-300" />
+          <img src="/streebo.png" alt="Streebo Logo" width="100" height="90" className="hover:opacity-70 hover:shadow-sm transition duration-300" />
         </div>
         <div className="divide-y"></div>
       </section>
-
-
-
 
       <section className="pb-16">
         <Title as="h2" variant="secondary" className="">
@@ -95,7 +89,7 @@ export default async function Home() {
         <p className="text-slate-700 text-lg">
           Below is a selection of recent projects that I&apos;ve worked on.
         </p>
-        <div className="lg:w-[170%] lg:-ml-[35%] grid grid-cols-1 md:grid-cols-2 grid-flow-dense gap-8 mt-16">
+        <div className="lg:w-[170%] lg:-ml-[35%] grid grid-cols-1 md:grid-cols-2 grid-flow-dense gap-8 mt-4">
           {projects.map((project) => {
             const isLink = !!project.href;
             const WrappingComponent = isLink ? Link : 'div';
