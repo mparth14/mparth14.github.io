@@ -1,5 +1,6 @@
+'use client';
 import Link from 'next/link';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import Image from 'next/image';
 
 import clsx from 'clsx';
@@ -11,37 +12,41 @@ const projects: {
   description: string;
   image: string;
   alt: string;
+  fallbackImage: string;
 }[] = [
-  {
-    title: 'QuickHire',
-    href: 'https://github.com/mparth14/QuickHire',
-    description:
-      'An intuitive hiring platform designed to connect job seekers with those in need of services.',
-    image: 'https://opengraph.githubassets.com/1/mparth14/quickhire',
-    alt: "QuickHire GitHub Repo"
-  },
   {
     title: 'Note9',
     href: 'https://github.com/mparth14/Note9',
     description:
       'A personal project to simplify note taking built with a serverless architecture using AWS services only.',
     image: 'https://opengraph.githubassets.com/1/mparth14/note9',
-    alt: "Note9 GitHub Repo"
-
+    alt: "Note9 GitHub Repo",
+    fallbackImage: '/note9_fallback.png'
   },
   {
     href: 'https://github.com/mparth14/TradeCards',
     title: 'TradeCards',
     description: 'A portal where users can sign up and exchange coupons, made using React and Spring Boot.',
     image: 'https://opengraph.githubassets.com/1/mparth14/tradecards',
-    alt: "TradeCards GitHub Repo"
+    alt: "TradeCards GitHub Repo",
+    fallbackImage: '/tradecards_fallback.png'
   },
   {
-    href: 'https://github.com/mparth14/ParkSpaceFinder',
-    title: 'ParkSpaceFinder',
-    description: 'An Android application that allows users to find and book available parking spaces near their location.',
-    image: 'https://opengraph.githubassets.com/1/mparth14/ParkSpaceFinder',
-    alt: "ParkSpaceFinder GitHub Repo"
+    href: 'https://github.com/mparth14/GenuineFeedback',
+    title: 'GenuineFeedback',
+    description: 'A NextJS solution that allows users to create a unique URL which they can share to receive anonymous feedbacks.',
+    image: 'https://opengraph.githubassets.com/1/mparth14/GenuineFeedback',
+    alt: "GenuineFeedback GitHub Repo",
+    fallbackImage: '/GenuineFeedback_fallback.png'
+  },
+  {
+    title: 'QuickHire',
+    href: 'https://github.com/mparth14/QuickHire',
+    description:
+      'An intuitive hiring platform designed to connect job seekers with those in need of services.',
+    image: 'https://opengraph.githubassets.com/1/mparth14/quickhire',
+    alt: "QuickHire GitHub Repo",
+    fallbackImage: '/quickHire_fallback.png'
   },
 ];
 
@@ -52,7 +57,7 @@ export default async function Home() {
         <h1 className="font-semibold text-4xl mb-4 text-slate-950">
           Ciao, I’m Parth.
           <span className="block text-slate-500 font-normal text-2xl">
-            A software engineer from India currently in Canada.
+            A software engineer currently based in Canada.
           </span>
         </h1>
         <p className="text-slate-700 text-md md:text-lg leading-normal">
@@ -93,6 +98,7 @@ export default async function Home() {
           {projects.map((project) => {
             const isLink = !!project.href;
             const WrappingComponent = isLink ? Link : 'div';
+            const [imgSrc, setImgSrc] = useState(project.image);
 
             return (
               <WrappingComponent
@@ -108,9 +114,10 @@ export default async function Home() {
                     width={450}
                     height={240}
                     quality={90}
-                    src={project.image}
+                    src={imgSrc}
                     alt={project.alt}
                     className="rounded-xl bg-cover"
+                    onError={() => setImgSrc(project.fallbackImage)}
                   />
                 </div>
                 <h3 className="text-slate-700 font-semibold tracking-tight text-xl">
