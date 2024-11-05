@@ -1,9 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { ReactElement, useState } from 'react';
-import Image from 'next/image';
-
-import clsx from 'clsx';
+import { ProjectCard } from '@/app/ProjectCard';
 import { Title } from '@/app/components/title';
 
 const projects: {
@@ -95,40 +92,9 @@ export default async function Home() {
           Below is a selection of recent projects that I&apos;ve worked on.
         </p>
         <div className="lg:w-[170%] lg:-ml-[35%] grid grid-cols-1 md:grid-cols-2 grid-flow-dense gap-8 mt-4">
-          {projects.map((project) => {
-            const isLink = !!project.href;
-            const WrappingComponent = isLink ? Link : 'div';
-            const [imgSrc, setImgSrc] = useState(project.image);
-
-            return (
-              <WrappingComponent
-                href={project.href ?? '/'}
-                target='_blank'
-                key={project.title}
-                className={clsx(
-                  'flex flex-col justify-center bg-slate-100 hover:bg-slate-200/70 transition-colors rounded-xl p-8'
-                )}
-              >
-                <div className="relative rounded-xl mb-4 shadow-project">
-                  <Image
-                    width={450}
-                    height={240}
-                    quality={90}
-                    src={imgSrc}
-                    alt={project.alt}
-                    className="rounded-xl bg-cover"
-                    onError={() => setImgSrc(project.fallbackImage)}
-                  />
-                </div>
-                <h3 className="text-slate-700 font-semibold tracking-tight text-xl">
-                  {project.title}
-                </h3>
-                <h3 className="text-slate-500 text-base">
-                  {project.description}
-                </h3>
-              </WrappingComponent>
-            );
-          })}
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
         </div>
       </section>
 

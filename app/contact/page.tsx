@@ -25,7 +25,7 @@ const contact: {
     label: 'in/pmodi1080',
   },
 ];
-export default async function InfoPage() {
+export default function InfoPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
