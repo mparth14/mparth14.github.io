@@ -11,8 +11,8 @@ const contact: {
 }[] = [
   {
     method: 'Email',
-    link: 'mailto:parthmodi@dal.ca',
-    label: 'parthmodi@dal.ca',
+    link: 'mailto:parth.modi@dal.ca',
+    label: 'parth.modi@dal.ca',
   },
   {
     method: 'GitHub',
