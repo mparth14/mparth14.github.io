@@ -76,6 +76,7 @@ export default async function Home() {
           Recent Experience
         </Title>
         <div className="flex space-x-2">
+          <img src="/cgi2.svg" alt="CGI Logo" width="100" height="90" className="hover:opacity-70 hover:shadow-sm transition duration-300" />
           <img src="/thomson-reuters.png" alt="Thomson Reuters Logo" width="100" height="90" className="hover:opacity-70 hover:shadow-sm transition duration-300" />
           <img src="/zealous-system.png" alt="Zealous System Logo" width="100" height="90" className="hover:opacity-70 hover:shadow-sm transition duration-300" />
           <img src="/streebo.png" alt="Streebo Logo" width="100" height="90" className="hover:opacity-70 hover:shadow-sm transition duration-300" />
@@ -97,8 +98,6 @@ export default async function Home() {
         ))}
         </div>
       </section>
-
-      
     </main>
   );
 }

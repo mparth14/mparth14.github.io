@@ -10,10 +10,16 @@ const experience: {
   logo: string;
 }[] = [
   {
+    company: 'CGI',
+    role: 'Digital Technological Consultant - Coop',
+    date: 'September 2024 → December 2024',
+    logo: '/cgi2.svg',
+  },
+  {
     company: 'Thomson Reuters',
     role: 'Associate Software Engineer',
     date: 'December 2021 → August 2023',
-    logo: '/thomson-reuters.png',
+    logo: '/tr.svg',
   },
   {
     company: 'Zealous System',
@@ -23,7 +29,7 @@ const experience: {
   },
   {
     company: 'Streebo',
-    role: 'Software Developer Intern',
+    role: 'Software Developer',
     date: 'January 2020 → July 2020',
     logo: '/streebo.png',
   }
@@ -35,14 +41,14 @@ export default async function InfoPage() {
       <PageHeader title="Information" />
       <section className="pb-8 prose prose-lg">
       <p>
-          I&apos;m currently pursuing Master of Applied Computer Science at Dalhousie University, where I am deepening my knowledge and skills in software development, cloud computing and architecture. Previously, I worked at Thomson Reuters as an Associate Software Engineer, where I contributed to developing a beta software solution called {' '}
-          <Link href="https://onvio.us/#/">Onvio</Link> , which is used for filing taxes in the US. 
+         I completed my Master of Applied Computer Science at Dalhousie University in December 2024, where I specialized in software development, cloud computing, and architecture. As part of my studies, I interned at <b>CGI</b> as a <b>Digital Technology Consultant Coop</b>, contributing to innovative digital solutions that helped the First Nations businesses optimize their operations and drive growth.
         </p>
         <p>
-        Before that, I gained valuable experience at Zealous System as a Business Analyst. In this role, I bridged the gap between technical and business teams, ensuring that the solutions we developed met client needs and business objectives. I also interned at Streebo as a Software Developer, where I honed my skills in developing and implementing software applications.
+          Earlier in my career, I worked at <b>Thomson Reuters</b> as an <b>Associate Software Engineer</b>, where I contributed to the development of <Link href="https://onvio.us/#/">Onvio</Link>, a software solution for filing taxes in the US. My role involved implementing new features, improving performance, and ensuring regulatory compliance. Prior to this, I gained experience as a <b>Business Analyst</b> at <b>Zealous System</b>, where I served as a bridge between technical and business teams, ensuring that developed solutions met client needs and business goals. I also worked as a <b>Software Developer</b> at <b>Streebo</b>, honing my skills in software application design, development, and implementation.
         </p>
         <p>
-        I enjoy working on personal projects to explore new technologies and push the boundaries of what is possible. I have developed projects like <Link href="https://github.com/mparth14/QuickHire">QuickHire</Link>, an intuitive hiring platform, and <Link href="https://github.com/mparth14/note9">Note9</Link>, a cloud-based note-taking application and, <Link href="https://github.com/mparth14/ParkSpaceFinder">ParkSpaceFinder</Link>, an Android application to help users find and book parking spaces near their location. Currently I am working on developing a serverless application for data processing and management.
+
+          In addition to my professional work, I am passionate about exploring new technologies through personal projects. I've developed <Link href="https://github.com/mparth14/QuickHire"><b>QuickHire</b></Link>, an intuitive hiring platform, <Link href="https://github.com/mparth14/note9"><b>Note9</b></Link>, a cloud-based note-taking app, and <Link href="https://github.com/mparth14/ParkSpaceFinder"><b>ParkSpaceFinder</b></Link>, an Android app for finding and booking parking spaces. Recently, I have also been working on a serverless application for receiving anonymous feedbacks from friends and family called <Link href="https://github.com/mparth14/GenuineFeedback"><b>GenuineFeedback</b></Link>.
         </p>
       </section>
 
